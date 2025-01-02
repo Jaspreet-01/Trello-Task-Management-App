@@ -1,0 +1,182 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:disabled {
+  background-color: #ccc;
+}
+
+button:hover:enabled {
+  background-color: #0056b3;
+}
+
+/* Login and Signup Pages */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 300px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+input::placeholder {
+  color: #bbb;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Error Message */
+p {
+  color: red;
+  font-size: 14px;
+}
+
+/* Task Board Page */
+.task-board {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.column {
+  width: 300px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  min-height: 400px;
+}
+
+.column h3 {
+  text-align: center;
+  color: #007bff;
+}
+
+.task-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.task-card:hover {
+  background-color: #e9ecef;
+}
+
+.task-card h4 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.task-card p {
+  color: #666;
+}
+
+/* Task Form */
+.task-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.task-form input,
+.task-form textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.task-form input:focus,
+.task-form textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.task-form textarea {
+  height: 100px;
+  resize: none;
+}
+
+.task-form button {
+  margin-top: 10px;
+  background-color: #28a745;
+}
+
+.task-form button:hover:enabled {
+  background-color: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .task-board {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .column {
+    width: 90%;
+  }
+
+  .task-form {
+    width: 100%;
+  }
+
+  form {
+    width: 100%;
+  }
+}
